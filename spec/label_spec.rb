@@ -11,11 +11,11 @@ describe Label do
   end
 
   it 'should validate the title of the lable' do
-    expect(lable.title).to eq ('Ruby')
+    expect(lable.title).to eq('Ruby')
   end
 
   it 'should validate the color of the lable' do
-    expect(lable.color).to eq ('red')
+    expect(lable.color).to eq('red')
   end
 
   it 'should add item peoperly' do
