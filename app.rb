@@ -40,4 +40,11 @@ class App
       end
     end
   end
+  def list_labels
+    if @labels.empty?
+      puts "Sorry, no saved level! \n"
+    else
+      @labels.each { |label| puts "Lable Title:#{label.title} color:#{label.color}\n" }
+    end
+  end
 end
