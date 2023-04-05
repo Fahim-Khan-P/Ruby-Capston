@@ -1,13 +1,14 @@
 require_relative './classes/lebal'
 require_relative './classes/book'
 require_relative './item'
+require_relative './data/preservedata'
 
 class App
   puts 'Welcome to our App!'
 
   def initialize
-    @books = []
-    @labels = []
+    @books = load_data('./data/books.json')
+    @labels = load_data('./data/lebal.json')
   end
 
   def add_book
@@ -18,7 +19,14 @@ class App
     puts 'Enter publish Date:'
     date = gets.chomp
     book = Book.new(publish, cover, date)
-    @books.push(book)
+    book_data = {
+      title: book.publisher,
+      cover: book.cover_state,
+      date: book.publish_date
+    }
+
+    @books.push(book_data)
+    save_data('./data/books.json', @books)
     puts 'Would you like to add label press (1):'
     option = gets.chomp.to_i
     return unless option == 1
