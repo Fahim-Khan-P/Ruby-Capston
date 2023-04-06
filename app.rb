@@ -11,6 +11,24 @@ class App
     @labels = load_data('./data/lebal.json')
   end
 
+  def list_books
+    if @books.empty?
+      puts 'Sorry!, no saved books \n'
+    else
+      @books.each_with_index do |book, index|
+        puts "#{index + 1}) Publish: #{book['publish']}, Cover: #{book['cover']}, Date: #{book['date']}"
+      end
+    end
+  end
+
+  def list_labels
+    if @labels.empty?
+      puts "Sorry, no saved level! \n"
+    else
+      @labels.each { |label| puts "Lable Title:#{label.title} color:#{label.color}\n" }
+    end
+  end
+
   def add_book
     puts 'Enter Publisher:'
     publish = gets.chomp
@@ -20,7 +38,7 @@ class App
     date = gets.chomp
     book = Book.new(publish, cover, date)
     book_data = {
-      title: book.publisher,
+      publish: book.publisher,
       cover: book.cover_state,
       date: book.publish_date
     }
@@ -37,23 +55,5 @@ class App
     color = gets.chomp
     label = Label.new(title, color)
     @labels.push(label)
-  end
-
-  def list_books
-    if @books.empty?
-      puts 'Sorry!, no saved books \n'
-    else
-      @books.each do |book|
-        puts "Publisher:#{book.publisher} Cover State: #{book.cover_state} Publish Date: #{book.publish_date} \n"
-      end
-    end
-  end
-
-  def list_labels
-    if @labels.empty?
-      puts "Sorry, no saved level! \n"
-    else
-      @labels.each { |label| puts "Lable Title:#{label.title} color:#{label.color}\n" }
-    end
   end
 end
