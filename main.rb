@@ -3,7 +3,6 @@ require_relative './app'
 def main
   app = App.new
   res = nil
-  puts "Welcome Catalog App!\n\n"
   while res != '10'
     puts "Please choose an option by enter in a number from 1 to 10:\n\n"
     puts '1 - List all books'

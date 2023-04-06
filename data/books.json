@@ -1,7 +1,17 @@
 [
   {
-    "publish": "khan",
+    "publish": "Khan",
     "cover": "good",
     "date": "2001"
+  },
+  {
+    "publish": "ALi",
+    "cover": "bad",
+    "date": "2000"
+  },
+  {
+    "publish": "Muhammad",
+    "cover": "Excellent",
+    "date": "1399"
   }
 ]

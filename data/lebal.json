@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "title": "sport",
+    "color": "red"
+  },
+  {
+    "title": "car",
+    "color": "black"
+  },
+  {
+    "title": "sorah",
+    "color": "white"
+  }
+]

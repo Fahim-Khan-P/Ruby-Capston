@@ -12,16 +12,18 @@ class App
   end
 
   def list_labels
+    @labels = load_data('./data/lebal.json')
     if @labels.empty?
       puts "Sorry, no saved level! \n"
     else
       @labels.each_with_index do |label, index|
-        puts "#{index+1}) Lable Title: #{label['title']} color: #{label['color']}\n"}
+        puts "#{index + 1}) Lable Title: #{label['title']} color: #{label['color']}\n"
       end
     end
   end
 
   def list_books
+    @books = load_data('./data/books.json')
     if @books.empty?
       puts 'Sorry!, no saved books \n'
     else
@@ -56,6 +58,12 @@ class App
     puts 'Enter label\'s color:'
     color = gets.chomp
     label = Label.new(title, color)
-    @labels.push(label)
+
+    lebal_data = {
+      title: label.title,
+      color: label.color
+    }
+    @labels.push(lebal_data)
+    save_data('./data/lebal.json', @labels)
   end
 end
