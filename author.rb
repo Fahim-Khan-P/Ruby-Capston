@@ -14,7 +14,7 @@ class Author < Item
   end
 
   def add_item(item)
-    (item.is_a?(Item) && @items.include?(item)) || (@items << item)
-    item.add_author(self)
+    @items.push(item)
+    item.author = self
   end
 end

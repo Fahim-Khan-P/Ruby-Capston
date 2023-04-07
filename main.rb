@@ -24,6 +24,18 @@ def main
       app.list_labels
     when '3'
       app.add_book
+    when '4'
+      app.add_game
+    when '5'
+      app.list_games
+    when '6'
+      app.list_authors
+    when '7'
+      app.list_all_genres
+    when '8'
+      app.add_music_album
+    when '9'
+      app.list_all_music_album
     else
       puts 'Thank you'
     end
