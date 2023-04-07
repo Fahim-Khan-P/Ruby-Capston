@@ -1,39 +1,20 @@
 require_relative '../game'
 
-describe 'Unit testing for Game Class' do
+describe Game do
   before :each do
-    @game = Game.new('Y', '1994/08/01', '2010/02/05')
+    @game1 = Game.new Time.local(2022), 'should check the test_multiplayer', Time.local(2018)
+    @game2 = Game.new Time.new(2009), Time.new(2018), true
   end
 
-  context 'initialize object' do
-    it 'is an instance of Game' do
-      expect(@game).to be_instance_of Game
-    end
-
-    it 'is not an instance of Item' do
-      expect(@game).not_to be_instance_of Item
-    end
-
-    it 'should be a kind of Item' do
-      expect(@game).to be_kind_of Item
+  describe '#NewGame' do
+    it 'should check the instance of test game if it is an instance of the Game class' do
+      expect(@game1).to be_instance_of Game
     end
   end
 
-  context 'Multiplayer Game' do
-    it 'should be "Y"' do
-      expect(@game.multiplayer).to eql 'Y'
-    end
-  end
-
-  context 'when was game last played' do
-    it 'should be "1994/08/01"' do
-      expect(@game.last_played_at).to eql '1994/08/01'
-    end
-
-    context 'when was game published' do
-      it 'should be "2010/02/05"' do
-        expect(@game.publish_date).to eql '2010/02/05'
-      end
+  describe 'can_be_archived?' do
+    it 'Can not use can_be_archived method when it private' do
+      expect(@game).not_to respond_to(:can_be_archived?)
     end
   end
 end

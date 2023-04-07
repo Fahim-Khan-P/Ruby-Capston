@@ -1,42 +1,7 @@
 [
   {
-    "publish_date": "2",
-    "multiplayer": "d",
-    "last_date": "2"
-  },
-  {
-    "publish_date": "2",
-    "multiplayer": "d",
-    "last_date": "2"
-  },
-  {
-    "publish_date": "f",
-    "multiplayer": "g",
-    "last_date": "g"
-  },
-  {
-    "publish_date": "kh",
-    "multiplayer": "hkj",
-    "last_date": "hk"
-  },
-  {
-    "publish_date": "jjj",
-    "multiplayer": "jjj",
-    "last_date": "jjj"
-  },
-  {
-    "publish_date": "fsd",
-    "multiplayer": "adsf",
-    "last_date": "asdf"
-  },
-  {
-    "publish_date": "d",
-    "multiplayer": "d",
-    "last_date": "d"
-  },
-  {
-    "publish_date": "d",
-    "multiplayer": "d",
-    "last_date": "d"
+    "publish_date": "2000",
+    "multiplayer": "yes",
+    "last_date": "2020"
   }
 ]

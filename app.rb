@@ -168,7 +168,7 @@ class App
     @music_album << music_data
     save_data('./data/musics.json', @music_album)
 
-    puts 'Would you like to add author? (1)- Yes // (2)- No : '
+    puts 'Would you like to add genre? (1)- Yes // (2)- No : '
     options = gets.chomp.to_i
     return unless options == 1
 
