@@ -23,4 +23,11 @@ class Item
   end
 
   # place for method
+  def move_to_archive
+    @archived = true if can_be_archived?
+  end
+
+  def can_be_archived?
+    (Time.now.year - @publish_date) > 10
+  end
 end
